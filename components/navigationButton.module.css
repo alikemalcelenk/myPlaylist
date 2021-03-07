@@ -1,0 +1,27 @@
+.button {
+    background-color: transparent;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button:hover .icon {
+        color: var(--c-green);
+    }
+    .button:hover .span {
+        color: var(--c-green);
+    }
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    color: white;
+}
+
+.span {
+    font-size: 14px;
+    color: white;
+}

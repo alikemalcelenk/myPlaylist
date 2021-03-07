@@ -11,9 +11,10 @@ export default {
 };
 
 export const Primary = () => (
-  <Box>
+  <Box >
     <Icons.Playlist height={50} width={50}/>
     <Icons.Music height={50} width={50}/>
+    <Icons.Logo height={50} width={50}/>
   </Box>
 );
 
