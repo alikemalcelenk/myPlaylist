@@ -6,6 +6,7 @@ const Button = styled.button(
 );
 
 Button.defaultProps = {
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
 }

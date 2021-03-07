@@ -1,16 +1,14 @@
 import React from 'react';
 
-import Button from '../components/button';
+//components
+import Button from '../components/addButton';
 
 export default {
-  title: 'Button',
-  component: Button
+  title: 'Buttons'
 };
 
-export const Primary = () => (
-  <Button>
-    <p>add</p>
-  </Button>
+export const AddPlaylist = () => (
+  <Button>Add Playlist</Button>
 );
 
 
