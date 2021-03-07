@@ -1,9 +1,13 @@
 import React from 'react';
 
+//styles
 import styles from './button.module.css';
 
-function Button({ children }) {
-    return <button className={styles.button}>{children}</button>
+//components - styled-system
+import Button from '../components/styledSystem/button';
+
+function ButtonSb({ children }) {
+    return <Button className={styles.button}>{children}</Button>
 }
 
-export default Button;
+export default ButtonSb;
