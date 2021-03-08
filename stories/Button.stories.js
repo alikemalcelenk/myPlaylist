@@ -26,7 +26,7 @@ export const NavigationSongs = () => (
 );
 
 export const Navigation = () => (
-  <Navigationn />
+  <Navigationn selectedPage='songs' />
 );
 
 

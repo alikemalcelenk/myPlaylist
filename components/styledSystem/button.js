@@ -8,7 +8,8 @@ const Button = styled.button(
 Button.defaultProps = {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: 'transparent'
 }
 
 export default Button;

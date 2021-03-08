@@ -9,11 +9,11 @@ import NavigationButton from './navigationButton';
 //components - styled-system
 import Box from './styledSystem/button';
 
-function Navigation() {
+function Navigation({ selectedPage }) {
     return (
         <Box className={styles.layout}>
-            <NavigationButton text='Songs' />
-            <NavigationButton text='Playlist' />
+            <NavigationButton text='Songs' selected={selectedPage === 'songs'} />
+            <NavigationButton text='Playlist' selected={selectedPage === 'playlist'} />
         </Box>
     )
 }
