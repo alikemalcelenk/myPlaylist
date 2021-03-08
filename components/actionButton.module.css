@@ -2,9 +2,18 @@
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .span {
     font-size: 14px;
     color: white;
+}
+
+.addButton {
+    background-color: var(--c-green);
+}
+
+.removeButton {
+    background-color: var(--c-red);
 }

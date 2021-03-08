@@ -1,5 +1,6 @@
 .button {
     cursor: pointer;
+    background-color: transparent;
 }
 
 .icon {
@@ -11,5 +12,5 @@
 
 .span {
     font-size: 18px;
-    color: white;
+    color: var(--c-white);
 }

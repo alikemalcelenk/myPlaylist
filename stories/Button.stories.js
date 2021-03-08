@@ -5,17 +5,19 @@ import ActionButton from '../components/actionButton';
 import NavigationButton from '../components/navigationButton';
 import NavigationSb from '../components/navigation';
 import LogoSb from '../components/logo';
+import AlbumCoverSb from '../components/albumCover';
+import SongSb from '../components/song';
 
 export default {
   title: 'Buttons'
 };
 
 export const AddToPlaylist = () => (
-  <ActionButton bg='#1ED760'>Add to Playlist</ActionButton>
+  <ActionButton type='add' />
 );
 
 export const Remove = () => (
-  <ActionButton bg='#D13B41'>Remove</ActionButton>
+  <ActionButton type='remove' />
 );
 
 export const NavigationPlaylist = () => (
@@ -32,6 +34,14 @@ export const Navigation = () => (
 
 export const Logo = () => (
   <LogoSb />
+);
+
+export const AlbumCover = () => (
+  <AlbumCoverSb src='https://artwollect-images.s3.eu-central-1.amazonaws.com/1604243025381' />
+);
+
+export const Song = () => (
+  <SongSb type='add' />
 );
 
 

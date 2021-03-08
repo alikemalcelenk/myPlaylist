@@ -2,6 +2,7 @@
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -20,12 +21,12 @@
     height: 20px;
     width: 20px;
     margin-right: 5px;
-    color: white;
+    color: var(--c-white);
 }
 
 .span {
     font-size: 14px;
-    color: white;
+    color: var(--c-white);
 }
 
 .buttonSelectedSpan {

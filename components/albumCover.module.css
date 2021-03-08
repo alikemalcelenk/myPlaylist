@@ -1,0 +1,10 @@
+.box {
+    background-color: transparent;
+}
+
+.image {
+    width: 140px;
+    height: 140px;
+    border: 1px solid var(--c-white);
+    border-radius: 5px;
+}
