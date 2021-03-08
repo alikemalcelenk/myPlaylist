@@ -11,7 +11,7 @@ import Box from './styledSystem/button';
 
 function Navigation({ selectedPage }) {
     return (
-        <Box className={styles.layout}>
+        <Box className={styles.box}>
             <NavigationButton text='Songs' selected={selectedPage === 'songs'} />
             <NavigationButton text='Playlist' selected={selectedPage === 'playlist'} />
         </Box>

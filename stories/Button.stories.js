@@ -3,7 +3,8 @@ import React from 'react';
 //components
 import ActionButton from '../components/actionButton';
 import NavigationButton from '../components/navigationButton';
-import Navigationn from '../components/navigation';
+import NavigationSb from '../components/navigation';
+import LogoSb from '../components/logo';
 
 export default {
   title: 'Buttons'
@@ -26,7 +27,11 @@ export const NavigationSongs = () => (
 );
 
 export const Navigation = () => (
-  <Navigationn selectedPage='songs' />
+  <NavigationSb selectedPage='songs' />
+);
+
+export const Logo = () => (
+  <LogoSb />
 );
 
 
