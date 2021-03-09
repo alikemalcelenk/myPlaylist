@@ -14,8 +14,8 @@ import Box from './styledSystem/Box';
 function Layout({ className, children, ...props }) {
     return (
         <Box className={cn(styles.mainBox, className)} {...props}>
-            <Logo />
-            <Navigation selectedPage='songs' />
+            <Logo className={styles.logo} />
+            <Navigation className={styles.navigation} selectedPage='songs' />
         </Box>
     )
 }

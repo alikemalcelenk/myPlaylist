@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 
 //styles
 import styles from './navigation.module.css';
@@ -9,9 +10,9 @@ import NavigationButton from './navigationButton';
 //components - styled-system
 import Box from './styledSystem/button';
 
-function Navigation({ selectedPage }) {
+function Navigation({ className, selectedPage }) {
     return (
-        <Box className={styles.box}>
+        <Box className={cn(styles.box, className)}>
             <NavigationButton text='Songs' selected={selectedPage === 'songs'} />
             <NavigationButton text='Playlist' selected={selectedPage === 'playlist'} />
         </Box>

@@ -1,7 +1,14 @@
 .mainBox {
+    background-color: var(--c-darkGray);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.logo {
     margin-left: 40px;
+}
+
+.navigation {
     margin-right: 40px;
 }

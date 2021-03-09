@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 
 //styles
 import styles from './logo.module.css';
@@ -10,9 +11,9 @@ import Text from './styledSystem/text';
 //components - styled-system
 import * as Icons from './icons';
 
-function Logo({ ...props }) {
+function Logo({ className, ...props }) {
     return (
-        <Button className={styles.button} {...props}>
+        <Button className={cn(styles.button, className)} {...props}>
             <Icons.Logo className={styles.icon} />
             <Text className={styles.span}>myPlaylist</Text>
         </Button>
