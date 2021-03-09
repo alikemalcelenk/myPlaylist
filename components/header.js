@@ -9,13 +9,13 @@ import Logo from './logo';
 import Navigation from './navigation';
 
 //components - styled-system
-import Box from './styledSystem/Box';
+import Box from './styledSystem/box';
 
-function Layout({ className, children, ...props }) {
+function Layout({ className, selectedPage, children, ...props }) {
     return (
         <Box className={cn(styles.mainBox, className)} {...props}>
             <Logo className={styles.logo} />
-            <Navigation className={styles.navigation} selectedPage='songs' />
+            <Navigation className={styles.navigation} selectedPage={selectedPage} />
         </Box>
     )
 }

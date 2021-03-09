@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 
 //styles
 import styles from './song.module.css';
@@ -11,17 +12,17 @@ import ActionButton from './actionButton';
 import Box from './styledSystem/box';
 import Text from './styledSystem/text';
 
-function Song({ src = 'https://artwollect-images.s3.eu-central-1.amazonaws.com/1604243025381', type, ...props }) {
+function Song({ className, src, name, artist, type, ...props }) {
     return (
-        <Box className={styles.mainBox} {...props}>
+        <Box className={cn(styles.mainBox, className)} {...props}>
             <AlbumCover src={src} />
             <Box className={styles.textBox}>
-                <Text className={styles.songNameText}>Instant Crush</Text>
+                <Text className={styles.songNameText}>{name}</Text>
                 <Text className={styles.songArtisttext}>
                     <Text className={styles.byText}>by </Text>
-                    Daft Punk</Text>
+                    {artist}</Text>
             </Box>
-            <ActionButton type='add' className={styles.button} />
+            <ActionButton type={type} className={styles.button} />
         </Box>
     )
 }

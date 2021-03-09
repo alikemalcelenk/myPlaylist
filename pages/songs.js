@@ -4,16 +4,16 @@ import React from 'react';
 import Layout from '../components/layout';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import Main from '../components/mainIndex.js';
+import Main from '../components/mainSongs.js';
 
-function HomePage() {
+function SongsPage() {
     return (
         <Layout>
-            <Header />
+            <Header selectedPage='songs' />
             <Main />
             <Footer />
         </Layout>
     )
 }
 
-export default HomePage
+export default SongsPage

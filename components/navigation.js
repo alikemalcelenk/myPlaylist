@@ -8,13 +8,13 @@ import styles from './navigation.module.css';
 import NavigationButton from './navigationButton';
 
 //components - styled-system
-import Box from './styledSystem/button';
+import Box from './styledSystem/box';
 
 function Navigation({ className, selectedPage }) {
     return (
         <Box className={cn(styles.box, className)}>
-            <NavigationButton text='Songs' selected={selectedPage === 'songs'} />
-            <NavigationButton text='Playlist' selected={selectedPage === 'playlist'} />
+            <NavigationButton type='songs' selected={selectedPage === 'songs'} />
+            <NavigationButton type='playlist' selected={selectedPage === 'playlist'} />
         </Box>
     )
 }

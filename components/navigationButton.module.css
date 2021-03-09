@@ -1,18 +1,22 @@
-.button {
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     background-color: transparent;
+    width: fit-content;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .button:hover .icon {
+    .box:hover .icon {
         color: var(--c-green);
     }
-    .button:hover .span {
+    .box:hover .span {
         color: var(--c-green);
     }
-    .button:hover {
+    .box:hover {
         background-color: var(--c-green-12);
     }
 }
@@ -30,5 +34,9 @@
 }
 
 .buttonSelectedSpan {
+    color: var(--c-green);
+}
+
+.buttonSelectedIcon {
     color: var(--c-green);
 }

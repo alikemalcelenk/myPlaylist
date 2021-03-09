@@ -5,7 +5,7 @@ import cn from 'classnames';
 import styles from './layout.module.css';
 
 //components - styled-system
-import Box from './styledSystem/Box';
+import Box from './styledSystem/box';
 
 function Layout({ className, children, ...props }) {
     return (

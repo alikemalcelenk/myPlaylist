@@ -21,11 +21,11 @@ export const Remove = () => (
 );
 
 export const NavigationPlaylist = () => (
-  <NavigationButton text='Playlist' />
+  <NavigationButton type='playlist' />
 );
 
 export const NavigationSongs = () => (
-  <NavigationButton text='Songs' />
+  <NavigationButton type='songs' />
 );
 
 export const Navigation = () => (
@@ -41,7 +41,7 @@ export const AlbumCover = () => (
 );
 
 export const Song = () => (
-  <SongSb type='add' />
+  <SongSb type='add' src='https://artwollect-images.s3.eu-central-1.amazonaws.com/1604243025381' name='Instant Crush' artist='Daft Punk' />
 );
 
 

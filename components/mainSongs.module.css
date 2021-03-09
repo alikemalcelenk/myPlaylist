@@ -1,0 +1,12 @@
+.mainBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.song {
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
