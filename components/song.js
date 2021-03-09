@@ -12,17 +12,21 @@ import ActionButton from './actionButton';
 import Box from './styledSystem/box';
 import Text from './styledSystem/text';
 
-function Song({ className, src, name, artist, type, ...props }) {
+function Song({ className, song, type, addToPlaylist, removeFromPlaylist, ...props }) {
     return (
         <Box className={cn(styles.mainBox, className)} {...props}>
-            <AlbumCover src={src} />
+            <AlbumCover src={song.cover} />
             <Box className={styles.textBox}>
-                <Text className={styles.songNameText}>{name}</Text>
+                <Text className={styles.songNameText}>{song.name}</Text>
                 <Text className={styles.songArtisttext}>
                     <Text className={styles.byText}>by </Text>
-                    {artist}</Text>
+                    {song.artist}
+                </Text>
             </Box>
-            <ActionButton type={type} className={styles.button} />
+            <ActionButton
+                type={type} className={styles.button}
+                onClick={() => type === 'add' ? addToPlaylist(song) : type === 'remove' && removeFromPlaylist(song)}
+            />
         </Box>
     )
 }

@@ -1,6 +1,9 @@
 import React from 'react';
 import cn from 'classnames';
+
+//redux
 import { connect } from 'react-redux';
+import { removeFromPlaylist } from '../redux/actions/index';
 
 //styles
 import styles from './mainPlaylist.module.css';
@@ -18,9 +21,8 @@ function SongsPageMain({ className, children, ...props }) {
                 <Song
                     className={styles.song}
                     type='remove'
-                    src={song.cover}
-                    name={song.name}
-                    artist={song.artist}
+                    song={song}
+                    removeFromPlaylist={props.removeFromPlaylist}
                 />
             ))}
         </Box>
@@ -29,9 +31,14 @@ function SongsPageMain({ className, children, ...props }) {
 
 
 const mapStateToProps = (state) => {
+    console.log(state)
     return {
         playlist: state.playlist
     }
 }
 
-export default connect(mapStateToProps)(SongsPageMain);
+const mapActionsToProps = {
+    removeFromPlaylist
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(SongsPageMain);

@@ -1,6 +1,9 @@
 import React from 'react';
 import cn from 'classnames';
+
+//redux
 import { connect } from 'react-redux';
+import { addToPlaylist } from '../redux/actions/index';
 
 //styles
 import styles from './mainSongs.module.css';
@@ -13,15 +16,15 @@ import Box from './styledSystem/box';
 
 
 function SongsPageMain({ className, children, ...props }) {
+    console.log(props)
     return (
         <Box className={cn(styles.mainBox, className)} {...props}>
             {props.songs.map((song) => (
                 <Song
                     className={styles.song}
                     type='add'
-                    src={song.cover}
-                    name={song.name}
-                    artist={song.artist}
+                    song={song}
+                    addToPlaylist={props.addToPlaylist}
                 />
             ))}
         </Box>
@@ -34,4 +37,8 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(SongsPageMain);
+const mapActionsToProps = {
+    addToPlaylist
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(SongsPageMain);
