@@ -17,8 +17,8 @@ function Song({ src = 'https://artwollect-images.s3.eu-central-1.amazonaws.com/1
         <Box className={styles.mainBox} {...props}>
             <AlbumCover src={src} />
             <Box className={styles.textBox}>
-                <Text className={styles.text}>Instant Crush</Text>
-                <Text className={styles.text}>
+                <Text className={styles.songNameText}>Instant Crush</Text>
+                <Text className={styles.songArtisttext}>
                     <Text className={styles.byText}>by </Text>
                     Daft Punk</Text>
             </Box>

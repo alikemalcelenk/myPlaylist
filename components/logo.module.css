@@ -13,4 +13,5 @@
 .span {
     font-size: 18px;
     color: var(--c-white);
+    font-family: SFProDisplay-SemiBold;
 }

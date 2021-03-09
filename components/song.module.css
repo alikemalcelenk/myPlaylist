@@ -11,8 +11,17 @@
     margin-left: 30px;
 }
 
+.songNameText {
+    font-family: SFProDisplay-SemiBold;
+}
+
+.songArtisttext {
+    font-family: SFProDisplay-RegularItalic;
+}
+
 .byText {
     color: var(--c-green);
+    font-family: SFProDisplay-Medium;
 }
 
 .button {
