@@ -13,12 +13,13 @@ import Song from './song';
 
 //components - styled-system
 import Box from './styledSystem/box';
+import Text from './styledSystem/text';
 
 
 function SongsPageMain({ className, children, ...props }) {
-    console.log(props)
     return (
         <Box className={cn(styles.mainBox, className)} {...props}>
+            <Text className={styles.title} >Songs</Text>
             {props.songs.map((song) => (
                 <Song
                     className={styles.song}

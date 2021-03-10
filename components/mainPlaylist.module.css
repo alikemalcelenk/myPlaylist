@@ -10,3 +10,10 @@
     margin-right: 40px;
     margin-top: 20px;
 }
+
+.title {
+    margin-left: 40px;
+    margin-top: 20px;
+    font-family: SFProDisplay-SemiBold;
+    font-size: 18px
+}
