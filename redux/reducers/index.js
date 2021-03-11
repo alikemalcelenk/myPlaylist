@@ -7,7 +7,7 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_TO_PLAYLIST':
+        case 'ADD_TO_PLAYLIST_TEST':
             return { ...state, playlist: [...state.playlist, action.payload] }
         case 'REMOVE_FROM_PLAYLIST':
             state.playlist.splice(state.playlist.indexOf(action.payload), 1)

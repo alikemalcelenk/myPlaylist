@@ -5,9 +5,18 @@ import '../styles/app.css';
 
 //redux
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { reducer } from '../redux/reducers/index';
-const store = createStore(reducer)
+
+//redux-saga
+import mySaga from '../redux/sagas/sagas'
+import createSagaMiddleware from 'redux-saga';
+const sagaMiddleware = createSagaMiddleware()
+
+const store = createStore(reducer, applyMiddleware(sagaMiddleware))
+
+// then run the saga
+sagaMiddleware.run(mySaga)
 
 export default function MyApp({ Component, pageProps }) {
     return (
