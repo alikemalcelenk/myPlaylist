@@ -24,6 +24,12 @@
     font-family: SFProDisplay-Medium;
 }
 
+.duration {
+    font-family: SFProDisplay-Medium;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
 .button {
     margin-left: auto;
 }

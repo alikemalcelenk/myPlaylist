@@ -23,6 +23,7 @@ function Song({ className, song, type, addToPlaylist, removeFromPlaylist, ...pro
                     {song.artist}
                 </Text>
             </Box>
+            <Text className={styles.duration}>{song.duration}</Text>
             <ActionButton
                 type={type} className={styles.button}
                 onClick={() => type === 'add' ? addToPlaylist(song) : type === 'remove' && removeFromPlaylist(song)}

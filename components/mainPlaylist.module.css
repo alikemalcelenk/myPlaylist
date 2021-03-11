@@ -17,3 +17,10 @@
     font-family: SFProDisplay-SemiBold;
     font-size: 18px
 }
+
+.emptyText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

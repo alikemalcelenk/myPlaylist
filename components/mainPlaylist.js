@@ -42,18 +42,22 @@ function SongsPageMain({ className, children, ...props }) {
 
 
     return (
-        <Box className={cn(styles.mainBox, className)} {...props}>
-            <Text className={styles.title} >Playlist
-                {props.playlist.length > 0 && <Text> | Duration: {totalDurationMin}m {totalDurationSec}s </Text>}
-            </Text>
-            {props.playlist.map((song) => (
-                <Song
-                    className={styles.song}
-                    type='remove'
-                    song={song}
-                    removeFromPlaylist={props.removeFromPlaylist}
-                />
-            ))}
+        <Box>
+            {props.playlist.length > 0 ? (
+                <Box className={cn(styles.mainBox, className)} {...props}>
+                    <Text className={styles.title}> Playlist | Duration: {totalDurationMin}m {totalDurationSec}s </Text>
+                    {props.playlist.map((song) => (
+                        <Song
+                            className={styles.song}
+                            type='remove'
+                            song={song}
+                            removeFromPlaylist={props.removeFromPlaylist}
+                        />
+                    ))}
+                </Box>
+            ) : (
+                <Text className={styles.emptyText}>Playlist is empty</Text>
+            )}
 
         </Box>
     )
