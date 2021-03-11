@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 //redux
 import { connect } from 'react-redux';
-import { addToPlaylist } from '../redux/actions/index';
+import { addToPlaylist, getSongs } from '../redux/actions/index';
 
 //styles
 import styles from './mainSongs.module.css';
@@ -17,6 +17,11 @@ import Text from './styledSystem/text';
 
 
 function SongsPageMain({ className, children, ...props }) {
+
+    React.useEffect(() => {
+        props.getSongs()
+    }, [])
+
     return (
         <Box className={cn(styles.mainBox, className)} {...props}>
             <Text className={styles.title} >Songs</Text>
@@ -34,12 +39,15 @@ function SongsPageMain({ className, children, ...props }) {
 
 const mapStateToProps = (state) => {
     return {
-        songs: state.songs
+        songs: state.songs,
+        isError: state.isError,
+        isLoading: state.isLoading
     }
 }
 
 const mapActionsToProps = {
-    addToPlaylist
+    addToPlaylist,
+    getSongs
 }
 
 export default connect(mapStateToProps, mapActionsToProps)(SongsPageMain);

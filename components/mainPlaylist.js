@@ -29,6 +29,7 @@ function SongsPageMain({ className, children, ...props }) {
         let totalSecond = 0;
         let minute, second;
 
+        //Durationlar x:y şeklinde geliyor. x'i minute, y'yi ise second olarak alıyorum.
         await props.playlist.map((song) => {
             minute = song.duration.slice(0, song.duration.indexOf(':'));
             second = song.duration.slice(song.duration.indexOf(':') + 1, song.duration.length);
@@ -42,7 +43,7 @@ function SongsPageMain({ className, children, ...props }) {
 
 
     return (
-        <Box>
+        <>
             {props.playlist.length > 0 ? (
                 <Box className={cn(styles.mainBox, className)} {...props}>
                     <Text className={styles.title}> Playlist | Duration: {totalDurationMin}m {totalDurationSec}s </Text>
@@ -59,7 +60,7 @@ function SongsPageMain({ className, children, ...props }) {
                 <Text className={styles.emptyText}>Playlist is empty</Text>
             )}
 
-        </Box>
+        </>
     )
 }
 

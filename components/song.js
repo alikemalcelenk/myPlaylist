@@ -15,7 +15,7 @@ import Text from './styledSystem/text';
 function Song({ className, song, type, addToPlaylist, removeFromPlaylist, ...props }) {
     return (
         <Box className={cn(styles.mainBox, className)} {...props}>
-            <AlbumCover src={song.cover} />
+            <AlbumCover src={song.artPhoto} />
             <Box className={styles.textBox}>
                 <Text className={styles.songNameText}>{song.name}</Text>
                 <Text className={styles.songArtisttext}>

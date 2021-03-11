@@ -1,13 +1,21 @@
-import { put, takeEvery } from 'redux-saga/effects'
+import { put, takeEvery, call } from 'redux-saga/effects';
+import axios from 'axios';
 
-function* test(action) {
-    console.log('SAGA LIVE')
-    console.log(action.payload)
-    yield put({ type: 'ADD_TO_PLAYLIST_TEST', payload: action.payload });
+function* getSongs() {
+    try {
+        yield put({ type: 'REQUEST_GET_SONGS' });
+        const songs = yield call(() => {
+            return axios.get('https://artwollectapi.herokuapp.com/app/web/myPlaylistSongs')
+        });
+        yield put({ type: 'REQUEST_GET_SONGS_SUCCESS', songs: songs.data.data });
+    } catch (error) {
+        yield put({ type: 'REQUEST_GET_SONGS_FAILED' });
+    }
 }
 
+//watch
 function* mySaga() {
-    yield takeEvery('ADD_TO_PLAYLIST', test);
+    yield takeEvery('GET_SONGS', getSongs);
 }
 
 export default mySaga;
